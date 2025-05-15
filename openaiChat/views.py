@@ -15,5 +15,5 @@ def chat_view(request):
             api_key=settings.OPENAI_API_KEY,  # Set your API key in settings
         )
         response_text = response.choices[0].message['content']
-    return render(request, "chat.html", {"response": response_text})
+    return render(request, "openAIChat/chat.html", {"response": response_text})
 
